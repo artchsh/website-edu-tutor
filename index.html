@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./resources/js/script.js"></script>
+    <title>Образовательный портал</title>
+ </head>
+
+<body id="login">
+  <form class="container shadow" action="./php_modules/authenticate.php" method="post">
+    <img id="logo" src="resources/icons/android-chrome-512x512.png" alt="logo">
+    <div class="input">
+      <label class="input__label" for="uname"><i class="fas fa-user"></i>  <b>Логин</b></label>
+      <input type="text" name="username" placeholder="Логин" id="username" required>
+    </div>
+    <div class="input">
+      <label class="input__label" for="psw"><i class="fas fa-lock"></i>  <b>Пароль</b></label>
+      <input type="password" name="password" placeholder="Пароль" id="password" required>
+    </div>
+    <button class="btn btn-fw btn__submit shadow" type="submit" value="Login">Войти</button>
+    <a href="register.html" class="reg">Зарегистрироваться</a>
+  </form>
+</body>
+
+</html>
