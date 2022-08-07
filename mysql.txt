@@ -10,3 +10,8 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 INSERT INTO `accounts` (`id`, `admin`, `nick`, `name`, `surname`, `password`) VALUES ('1', '1', 'artchsh', 'Артём', 'Щёголев', 'a14102004');
+
+   $DATABASE_HOST = 'localhost';
+   $DATABASE_USER = 'artchsht_admin';
+   $DATABASE_PASS = 'fgjqBqvl*~7M';
+   $DATABASE_NAME = 'artchsht_phplogin';
