@@ -2,10 +2,12 @@
 $subject=$_POST['subject'];
 $type_subject=$_POST['type_subject'];
 
-
-
-
 $target_dir = "../materials/$subject/$type_subject/";
+
+if ($type_subject === 'answers') {
+  $target_dir = "../materials/$subject/variants/answers/";
+}
+
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
