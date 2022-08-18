@@ -33,22 +33,32 @@
   </form>
 -->
 
-<body id="login" class="bg-secondary align-items-center text-white align-items-center d-flex">
+<body id="login" class="bg-secondary">
   <div class="d-flex align-items-center container-fluid" style="height: 100vh;">
-    <form class="container bg-dark rounded pb-3 pt-3" style="width: 300px;" action="./php_modules/authenticate.php"
-      method="post">
-      <!--<img class="img-fluid" style="height: 100px;" id="logo" src="resources/icons/android-chrome-512x512.png" alt="logo">-->
-      <div class="mb-3">
-        <label class="form-label" for="username"><i class="fas fa-user"></i> <b>Логин</b></label>
-        <input class="form-control" type="text" name="username" placeholder="Логин" id="username" required>
+    <div class="card m-auto">
+      <card class="card-header text-center mt-1">
+        <h1>Логин</h1>
+      </card>
+      <div class="card-body">
+        <form class="rounded pb-3" style="width: 300px;" action="./php_modules/authenticate.php"
+          method="post">
+          <!--<img class="img-fluid" style="height: 100px;" id="logo" src="resources/icons/android-chrome-512x512.png" alt="logo">-->
+          <div class="mb-3">
+            <label class="form-label" for="username"><i class="fas fa-user"></i> <b>Логин</b></label>
+            <input class="form-control" type="text" name="username" placeholder="Логин" id="username" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="password"><i class="fas fa-lock"></i> <b>Пароль</b></label>
+            <input class="form-control" type="password" name="password" placeholder="Пароль" id="password" required>
+          </div>
+          <button class="btn btn-primary" type="submit" value="Login">Войти</button>
+          <a href="register.html" class="btn btn-secondary">Зарегистрироваться</a>
+        </form>
       </div>
-      <div class="mb-3">
-        <label class="form-label" for="password"><i class="fas fa-lock"></i> <b>Пароль</b></label>
-        <input class="form-control" type="password" name="password" placeholder="Пароль" id="password" required>
+      <div class="card-footer">
+        <p class="text-secondary">Купить подписку в <a href="t.me/artchsh">Telegram</a></p>
       </div>
-      <button class="btn btn-primary" type="submit" value="Login">Войти</button>
-      <a href="register.html" class="btn btn-secondary">Зарегистрироваться</a>
-    </form>
+    </div>
   </div>
 </body>
 

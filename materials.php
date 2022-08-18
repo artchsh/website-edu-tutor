@@ -10,10 +10,11 @@
     <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Образовательный портал</title>
+
+    
 </head>
 
 <body class="bg-secondary">
@@ -27,7 +28,7 @@
                 <div class="modal-body">
                     <p><?php echo $name,' ', $surname ?></p>
                     <p>Подписка до <?php echo $expirationDate ?></p>
-                    <?php if ($admin === 1) {
+                    <?php if ($admin === 1) { // need to do with js to do loading.gif
                echo '
                <h3 style="margin-bottom: 0.3em;margin-top: 0.3em;"> Загрузка файлов</h3>
                <form action="./php_modules/upload.php" method="post" id="fileUpload" enctype="multipart/form-data">
@@ -43,15 +44,16 @@
                      <option value="books">Учебник</option>
                      <option value="answers">Ответы</option>
                   </select>
-                  <input type="file" class="form-control w-100" name="fileToUpload" id="fileToUpload">
+                  <input type="file" class="form-control w-100" name="fileToUpload[]" id="fileToUpload" multiple>
                </form>
                ';
             }?>
                 </div>
                 <div class="modal-footer">
+                    <img id='loading' src='./resources/icons/favicon.ico' style='visibility: hidden;'>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
                     <?php if ($admin ===1) {
-                     echo '<button type="submit" form="fileUpload" class="btn bg-primary text-white" name="submit"><i class="fa-solid fa-file-arrow-up"></i> Загрузить</button>';
+                     echo '<button type="submit" form="fileUpload" id="btnFileToUpload" class="btn bg-primary text-white" name="submit"><i class="fa-solid fa-file-arrow-up"></i> Загрузить</button>';
                      }
                      ?>
                 </div>
@@ -95,7 +97,7 @@
         <!-- 
       PHYSICS
     -->
-        <div class="card m-2 shadow w-auto" style="width: 500px;">
+        <div class="card m-2 shadow mw-25" style="width: 500px;">
             <div class="card-header text-center">
                 <h1>Физика</h1>
             </div>
@@ -154,7 +156,7 @@
         <!-- 
       MATH
     -->
-    <div class="card m-2 shadow w-auto" style="width: 500px;">
+    <div class="card m-2 shadow mw-25" style="width: 500px;">
             <div class="card-header text-center">
                 <h1>Математика</h1>
             </div>
@@ -213,7 +215,7 @@
         <!-- 
       CHEMISTRY
     -->
-    <div class="card m-2 shadow w-auto" style="width: 500px;">
+    <div class="card m-2 shadow mw-25" style="width: 500px;">
             <div class="card-header text-center">
                 <h1>Химия</h1>
             </div>
