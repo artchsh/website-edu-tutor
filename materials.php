@@ -27,7 +27,7 @@
                 </div>
                 <div class="modal-body">
                     <p><?php echo $name,' ', $surname ?></p>
-                    <p>Подписка до <?php echo $expirationDate ?></p>
+                    <p>Подписка до <?php echo $expirationDate ?> включительно</p>
                     <?php if ($admin === 1) { // need to do with js to do loading.gif
                echo '
                <h3 style="margin-bottom: 0.3em;margin-top: 0.3em;"> Загрузка файлов</h3>

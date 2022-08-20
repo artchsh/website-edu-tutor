@@ -34,7 +34,7 @@ if ($stmt = $con->prepare('SELECT id, password, expirationDate FROM accounts WHE
         if (password_verify($_POST['password'], $password)) {
             list($ExpDay, $ExpMonth) = explode(".", $expirationDate);
             if($ExpMonth === $monthToday or $monthToday > $ExpMonth) {
-                if($dayToday === $ExpDay or $dayToday > $ExpDay) {
+                if($dayToday > $ExpDay) {
                     echo 'Ваш аккаунт просрочен! Пожалуйста, обратитесь к владельцу. '; 
                 } else {
                     // Verification success! User has logged-in!

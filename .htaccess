@@ -12,4 +12,3 @@ Header set X-Content-Type-Options nosniff
     Order allow,deny
     Deny from all
 </Files>
-Header add Content-Security-Policy "default-src 'self';
