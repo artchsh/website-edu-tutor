@@ -1,2 +1,9 @@
 php_modules/trash\#\#\#\#\#.php
 .DS_Store
+node_modules
+.config.js
+src
+package-lock.json
+resources/css/style.css.map
+resources/css/style.css.map
+resources/css/style.scss

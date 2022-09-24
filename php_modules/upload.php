@@ -43,9 +43,9 @@ if ($uploadOk == 0) {
 } else {
 
   echo $_FILES['fileToUpload']['name'];
-  $countfiles = count($_FILES['fileToUpload']['name']);
+  $countFiles = count($_FILES['fileToUpload']['name']);
 
-  for($i=0;$i<$countfiles;$i++) {
+  for($i=0;$i<$countFiles;$i++) {
 
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     //htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]))
