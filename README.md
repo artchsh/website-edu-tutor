@@ -1,1 +1,1 @@
-# website-edu-tutor
+# DEPRECATED
